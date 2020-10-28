@@ -4,7 +4,7 @@ export const getApi = async () => {
 
   if (!res.ok) throw 'Unable to find';
 
-  return json.results.map(character => ({
+  return json.map(character => ({
     id: character.char_id,
     name: character.name,
     image: character.img

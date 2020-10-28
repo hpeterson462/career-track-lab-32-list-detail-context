@@ -1,15 +1,16 @@
 import React from 'react';
-import { useCharacters } from '../../hooks/characters';
 import CharacterItem from './CharacterItem';
+import { useCharacters } from '../../../hooks/character';
 
 const CharacterList = () => {
   const characters = useCharacters();
+  const loading = useCharacters();
 
   if (loading)
     return <h1>Loading...</h1>;
 
   const characterElements = characters.map(character => (
-    <li key={character.id}>
+    <li key={character.char_id}>
       <CharacterItem {...character} />
     </li>
   ));
