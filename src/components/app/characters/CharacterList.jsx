@@ -4,19 +4,15 @@ import { useCharacters } from '../../../hooks/character';
 
 const CharacterList = () => {
   const characters = useCharacters();
-  const loading = useCharacters();
-
-  if (loading)
-    return <h1>Loading...</h1>;
 
   const characterElements = characters.map(character => (
-    <li key={character.char_id}>
+    < li key={character.char_id} >
       <CharacterItem {...character} />
-    </li>
+    </li >
   ));
 
   return (
-    <ul>
+    <ul data-testid="characters">
       {characterElements}
     </ul>
   );
