@@ -1,8 +1,8 @@
 import React from 'react';
-import { useToggle } from '';
+import { useThemeToggle } from '../hooks/theme';
 
 const Header = () => {
-  const toggle = useToggle();
+  const toggle = useThemeToggle();
 
   return (
     <>
@@ -11,3 +11,4 @@ const Header = () => {
   );
 };
 
+export default Header;
