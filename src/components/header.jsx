@@ -1,8 +1,8 @@
-import React from 'react';
-import { useThemeToggle } from '../hooks/theme';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const Header = () => {
-  const toggle = useThemeToggle();
+  const { toggle } = useContext(ThemeContext);
 
   return (
     <>

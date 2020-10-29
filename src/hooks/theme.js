@@ -9,5 +9,6 @@ export const useThemeType = () => {
 
 export const useThemeToggle = () => {
   const { toggle } = useContext(ThemeContext);
+
   return toggle;
 };

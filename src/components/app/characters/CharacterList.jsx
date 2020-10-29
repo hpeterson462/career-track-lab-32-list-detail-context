@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import CharacterItem from './CharacterItem';
 import { useCharacters } from '../../../hooks/character';
 import styles from './CharacterList.css';
+import { ThemeContext } from '../../../context/ThemeContext';
 
 const CharacterList = () => {
   const characters = useCharacters();
@@ -12,10 +13,19 @@ const CharacterList = () => {
     </li >
   ));
 
+  const { lightTheme } = useContext(ThemeContext);
+  console.log(lightTheme, 'heelllooo');
+
+  const style = {
+    backgroundColor: lightTheme
+  }
+
   return (
-    <ul data-testid="characters" className={styles.CharacterList}>
-      {characterElements}
-    </ul>
+    <div style={style}>
+      <ul data-testid="characters" className={styles.CharacterList}>
+        {characterElements}
+      </ul>
+    </div>
   );
 };
 
