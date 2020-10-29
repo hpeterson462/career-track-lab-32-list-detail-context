@@ -1,8 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from '../../../context/ThemeContext';
+import Controls from './Controls';
 
 const Theme = () => (
-  <ThemeProvider>
-    <
-  </ThemeProvider>
-)
+  <Controls />
+);
+
+export default Theme;

@@ -4,25 +4,14 @@ import { useState } from 'react';
 export const ThemeContext = React.createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [themeType, setThemeType] = useState('Light');
+  const [themeType, setThemeType] = useState('#FFFFF');
 
   const toggle = () => {
     setThemeType(oldType => {
-      if (oldType === 'Light') return 'Dark';
-      return 'Light';
+      if (oldType === '#FFFFF') return '#00000';
+      return '#FFFFF';
     });
   };
-
-  // const handleChange = ({ target }) => {
-  //   if (target.name === 'lightColor') setLightColor(target.value);
-  //   if (target.name === 'darkColor') setDarkColor(target.value);
-  // };
-
-  // const bucket = {
-  //   lightColor,
-  //   darkColor,
-  //   handleChange
-  // };
 
   return (
     <ThemeContext.Provider value={{ themeType, toggle }}>
