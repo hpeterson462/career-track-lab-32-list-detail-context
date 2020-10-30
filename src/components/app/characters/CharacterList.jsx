@@ -3,9 +3,11 @@ import CharacterItem from './CharacterItem';
 import { useCharacters } from '../../../hooks/character';
 import styles from './CharacterList.css';
 import { ThemeContext } from '../../../context/ThemeContext';
+import { useThemeMode } from '../../../hooks/theme';
 
 const CharacterList = () => {
   const characters = useCharacters();
+  const themeMode = useThemeMode();
 
   const characterElements = characters.map(character => (
     <li key={character.char_id}>
@@ -13,16 +15,19 @@ const CharacterList = () => {
     </li >
   ));
 
-  const { lightTheme } = useContext(ThemeContext);
-  console.log(lightTheme, 'heelllooo');
+  const style1 = {
+    backgroundColor: '#FFFFFF',
+    color: '#AA6C39'
+  }
 
-  const style = {
-    backgroundColor: lightTheme
+  const style2 = {
+    backgroundColor: '#000000',
+    color: '#AA6C39'
   }
 
   return (
-    <div style={style}>
-      <ul data-testid="characters" className={styles.CharacterList}>
+    <div data-testid="characters" style={themeMode === 'lightTheme' ? style1 : style2}>
+      <ul className={styles.CharacterList}>
         {characterElements}
       </ul>
     </div>

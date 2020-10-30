@@ -4,17 +4,17 @@ import { useState } from 'react';
 export const ThemeContext = React.createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [lightTheme, setLightTheme] = useState('#FFFFFF');
+  const [themeMode, setThemeMode] = useState('lightTheme');
 
   const toggle = () => {
-    if (lightTheme === '#FFFFFF')
-      return setLightTheme('#000000')
-    if (lightTheme === '#000000')
-      return setLightTheme('#FFFFFF')
+    if (themeMode === 'lightTheme')
+      setThemeMode('darkTheme');
+    if (themeMode === 'darkTheme')
+      setThemeMode('lightTheme');
   };
 
   return (
-    <ThemeContext.Provider value={{ lightTheme, toggle }}>
+    <ThemeContext.Provider value={{ themeMode, toggle }}>
       {children}
     </ThemeContext.Provider>
   );
