@@ -10,10 +10,4 @@ const CharacterItem = ({ name, image }) => (
   </figure>
 );
 
-CharacterItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
-};
-
 export default CharacterItem;
-
