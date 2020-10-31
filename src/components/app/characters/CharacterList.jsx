@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import CharacterItem from './CharacterItem';
 import { useCharacters } from '../../../hooks/character';
 import styles from './CharacterList.css';
-import { ThemeContext } from '../../../context/ThemeContext';
 import { useThemeMode } from '../../../hooks/theme';
 
 const CharacterList = () => {
