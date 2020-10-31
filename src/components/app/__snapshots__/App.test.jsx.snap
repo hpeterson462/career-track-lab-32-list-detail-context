@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterDetail component renders CharacterDetail after loading... 1`] = `
+<DocumentFragment>
+  <figure>
+    <img />
+    <figcaption />
+  </figure>
+</DocumentFragment>
+`;

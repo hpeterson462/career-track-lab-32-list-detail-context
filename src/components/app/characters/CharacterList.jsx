@@ -27,7 +27,7 @@ const CharacterList = () => {
 
   return (
     <div data-testid="characters" style={themeMode === 'lightTheme' ? style1 : style2}>
-      <ul className={styles.CharacterList}>
+      <ul className={styles.CharacterList} key={style1}>
         {characterElements}
       </ul>
     </div>
