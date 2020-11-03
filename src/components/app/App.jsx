@@ -5,7 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import CharacterList from '../app/characters/CharacterList';
-import Header from '../Header';
+import Header from '../header';
 
 export default function App() {
   return (
