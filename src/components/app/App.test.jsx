@@ -1,11 +1,11 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import App from './App';
+import { render } from '@testing-library/react';
+import CharacterDetail from '../../components/app/characters/CharacterItem';
 
-describe('App component', () => {
-  afterEach(() => cleanup());
-  it('renders App', () => {
-    const { asFragment } = render(<App />);
+describe('CharacterDetail component', () => {
+  it('renders CharacterDetail after loading...', () => {
+    const { asFragment } = render(<CharacterDetail />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
+

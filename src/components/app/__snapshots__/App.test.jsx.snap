@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders App 1`] = `
+exports[`CharacterDetail component renders CharacterDetail after loading... 1`] = `
 <DocumentFragment>
-  <h1>
-    Hello World
-  </h1>
+  <figure>
+    <img />
+    <figcaption />
+  </figure>
 </DocumentFragment>
 `;
